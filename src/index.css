@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@config '../tailwind.config.js';
+@import 'tailwindcss';
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --font-redHatDisplay: 'Red Hat Display', 'sans-serif';
+  --font-clashDisplay: 'Clash Display', 'sans-serif';
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/Fonts/TTF/ClashDisplay-Variable.ttf');
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+
+  @apply overflow-x-hidden bg-white selection:bg-primaryColor selection:text-blue-50;
+}
+@layer base {
+  button,
+  a {
+    @apply not-disabled:cursor-pointer;
+  }
+
+  .nav-link {
+    @apply inline-block h-full px-2 py-2 text-base leading-[25.6px] font-medium text-textDarkColor transition duration-300 ease-in-out hover:text-primaryColor;
+  }
+  .primary-btn {
+    @apply rounded-md bg-primaryColor px-5 py-[10px] text-center text-base font-bold text-blue-50 transition duration-300 hover:scale-[0.97] hover:bg-primaryColor/90;
+  }
+}
+button {
+  user-select: none;
+}
+/* lenis CSS  */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+@layer utilities {
+  .container {
+    @apply mx-auto;
+  }
+}
