@@ -348,7 +348,7 @@ const Header = () => {
       </nav>
 
       {/* Mobile Navigation Menu - Hidden in game mode */}
-      {isMenuOpen && !isGameMode && !showQuiz && !document.body.classList.contains('overflow-hidden') && (
+      {isMenuOpen && !isGameMode && !showQuiz && (
         <div className="bg-[#F8F8FD] shadow-2xl transition-all duration-300 md:hidden">
           <ul className="flex flex-col p-6 space-y-2">
             <li>
