@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import NotFound from '@/components/NotFound';
 import RootLayout from '@/layouts/RootLayout';
 import HomePage from '@/pages/Home';
@@ -7,6 +8,11 @@ import RecruiterSignUpPage from '@/pages/RecruiterSignUpPage';
 import EmployerSignUpPage from '@/pages/EmployerSignUpPage';
 import LearningPage from '@/pages/LearningPage';
 import CommunityPage from '@/pages/CommunityPage';
+
+// Lazy load the company pages for better performance
+const CompaniesPage = lazy(() => import('@/pages/CompaniesPage'));
+const CompanyDetailsPage = lazy(() => import('@/pages/CompanyDetailsPage'));
+const JobDetailsPage = lazy(() => import('@/pages/JobDetailsPage'));
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -41,6 +47,23 @@ const router = createBrowserRouter([
       {
         path: 'community',
         element: <CommunityPage />,
+      },
+      {
+        path: 'companies',
+        children: [
+          {
+            index: true,
+            element: <CompaniesPage />,
+          },
+          {
+            path: ':id',
+            element: <CompanyDetailsPage />,
+          },
+          {
+            path: ':id/jobs/:jobId',
+            element: <JobDetailsPage />,
+          },
+        ],
       },
       {
         path: '*',

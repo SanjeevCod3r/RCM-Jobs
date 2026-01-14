@@ -431,7 +431,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink
-                to="/blog"
+                to="/community"
                 className="flex items-center gap-3 px-4 py-3 text-base font-medium text-textGrayColor transition-colors duration-200 hover:bg-primaryColor/10 hover:text-primaryColor rounded-lg"
                 onClick={toggleMenu}
               >
