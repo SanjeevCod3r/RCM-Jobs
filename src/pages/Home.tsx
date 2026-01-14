@@ -5,6 +5,7 @@ import FeaturedJobs from '@/components/FeaturedJobs';
 import Hero from '@/components/Hero';
 import LatestJobs from '@/components/LatestJobs';
 import OptionsSection from '@/components/OptionsSection';
+import TopCompanies from '@/components/TopCompanies';
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Brands />
       <OptionsSection />
       <Categories />
+      <TopCompanies />
       <Cta />
       <FeaturedJobs />
       <LatestJobs />

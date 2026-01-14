@@ -6,6 +6,7 @@ import SignUpChoicePage from '@/pages/SignUpChoicePage';
 import RecruiterSignUpPage from '@/pages/RecruiterSignUpPage';
 import EmployerSignUpPage from '@/pages/EmployerSignUpPage';
 import LearningPage from '@/pages/LearningPage';
+import CommunityPage from '@/pages/CommunityPage';
 import { createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'learning',
         element: <LearningPage />,
+      },
+      {
+        path: 'community',
+        element: <CommunityPage />,
       },
       {
         path: '*',

@@ -4,6 +4,7 @@ import navLogo from '@/assets/images/header/logo.svg';
 import { IoMenuSharp, IoClose, IoBriefcaseOutline, IoBusinessOutline, IoLaptopOutline, IoSchoolOutline, IoNewspaperOutline, IoGameControllerOutline, IoChevronDown } from 'react-icons/io5';
 import { jobCategories } from '@/data/jobCategories';
 import { JobCategoriesDropdown } from './JobCategoriesDropdown';
+import CompaniesDropdown from './CompaniesDropdown';
 
 import useScrollPosition from '@/hook/useScrollPosition';
 
@@ -185,12 +186,7 @@ const Header = () => {
               <JobCategoriesDropdown />
             </li>
             <li>
-              <NavLink 
-                to="/companies" 
-                className="relative px-3 py-2 text-base font-medium text-textGrayColor transition-colors duration-200 hover:text-primaryColor after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primaryColor after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Companies
-              </NavLink>
+              <CompaniesDropdown />
             </li>
             <li>
               <NavLink 
@@ -210,7 +206,7 @@ const Header = () => {
             </li>
             <li>
               <NavLink 
-                to="/blog" 
+                to="/community" 
                 className="relative px-3 py-2 text-base font-medium text-textGrayColor transition-colors duration-200 hover:text-primaryColor after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primaryColor after:transition-all after:duration-300 hover:after:w-full"
               >
                 Community

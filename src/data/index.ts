@@ -15,6 +15,44 @@ import brand3 from '@/assets/images/brands/brand3.png';
 import brand4 from '@/assets/images/brands/brand4.png';
 import brand5 from '@/assets/images/brands/brand5.png';
 
+// Import company logos
+import metaLogo from '@/assets/images/featured-jobs/meta.png';
+import netflixLogo from '@/assets/images/featured-jobs/netflix.png';
+import microsoftLogo from '@/assets/images/featured-jobs/microsoft.png';
+import redditLogo from '@/assets/images/featured-jobs/reddit.png';
+import googleLogo from '@/assets/images/featured-jobs/google.png';
+import spotifyLogo from '@/assets/images/featured-jobs/spotify.png';
+
+export const topCompanies = [
+  {
+    id: 1,
+    name: 'Tech Giants',
+    companies: [
+      { name: 'Google', logo: googleLogo, jobs: 1245 },
+      { name: 'Microsoft', logo: microsoftLogo, jobs: 982 },
+      { name: 'Meta', logo: metaLogo, jobs: 876 },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Entertainment',
+    companies: [
+      { name: 'Netflix', logo: netflixLogo, jobs: 543 },
+      { name: 'Spotify', logo: spotifyLogo, jobs: 321 },
+      { name: 'Reddit', logo: redditLogo, jobs: 210 },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Startups',
+    companies: [
+      { name: 'TalkIt', logo: brand5, jobs: 98 },
+      { name: 'Vodafone', logo: brand1, jobs: 156 },
+      { name: 'Intel', logo: brand2, jobs: 87 },
+    ],
+  },
+];
+
 export const categories = [
   {
     id: 1,
